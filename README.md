@@ -6,7 +6,7 @@ https://grow.google/certificates/data-analytics/<br />
 https://www.coursera.org/professional-certificates/google-data-analytics
 
 This case study is an analysis of a fictional company, Cyclistic, that offers a bike-share service in Chicago. The goal of the case study is to answer the following:<br />
-How do annual members and casual riders use Cyclistic bikes differently?<br />
+*How do annual members and casual riders use Cyclistic bikes differently?*<br />
 
 Deliverables:<br />
 - Documentation:
