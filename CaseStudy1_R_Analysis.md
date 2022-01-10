@@ -411,7 +411,7 @@ full_year_clean %>%
     scale_y_continuous(labels = comma)
 ```
 
-![](CaseStudy1_R_Analysis_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/GDAPC_Total_Rides.png)<!-- -->
 <br />
 
 #### Bar chart for mean ride length per month
@@ -425,4 +425,4 @@ full_year_clean %>%
   theme(axis.text.y = element_text(angle = 45))
 ```
 
-![](CaseStudy1_R_Analysis_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/GDAPC_Mean_Ride_Length.png)<!-- -->
