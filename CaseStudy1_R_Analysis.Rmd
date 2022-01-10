@@ -1,0 +1,148 @@
+---
+title: "Cyclistic Bike Share Analysis"
+author: "Jake Isaacs"
+date: "1/10/2022"
+output: html_document
+---
+
+## Analysis
+#### Loading the necessary packages
+```{r loading packages}
+library(tidyverse)
+library(skimr)
+library(janitor)
+```
+<br />
+
+#### Loading the data
+```{r}
+full_year <- read_csv("fullyear-tripdata-R-v3.csv")
+```
+<br />
+
+#### Quick review of the data
+```{r}
+head(full_year)
+colnames(full_year)
+skim_without_charts(full_year)
+glimpse(full_year)
+```
+<br />
+
+#### Making sure that the column names are unique and consistent
+```{r}
+clean_names(full_year)
+```
+<br />
+
+#### Renaming the first column for better clarity
+```{r}
+full_year %>%
+  rename(months = ...1)
+```
+<br />
+
+#### Saving the updated full_year as a new data frame
+```{r}
+full_year_clean <- full_year %>%
+  rename(months = ...1)
+```
+<br />
+
+#### Taking a quick look at the new data frame
+```{r}
+View(full_year_clean)
+```
+<br />
+
+#### Looking at specific columns
+```{r}
+full_year_clean %>%
+  select(months, mode_day_of_week, mean_ride_length, count_rides_casual, count_rides_member, total_rides)
+```
+<br />
+
+#### Finding the months with mean ride lengths that are longer than 20 minutes
+```{r}
+full_year_clean %>%
+  select(months, mode_day_of_week, mean_ride_length, count_rides_casual, count_rides_member, total_rides) %>%
+  filter(mean_ride_length > 20.00) %>%
+  filter(mean_ride_length != 0.00)
+```
+<br />
+
+#### Finding the months with mean ride lengths that are 20 minutes or shorter
+```{r}
+full_year_clean %>%
+  select(months, mode_day_of_week, mean_ride_length, count_rides_casual, count_rides_member, total_rides) %>%
+  filter(mean_ride_length <= 20.00) %>%
+  filter(mean_ride_length != 0.00)
+```
+<br />
+
+#### Finding the most popular day of the week for all users
+```{r}
+full_year_clean %>%
+  select(mode_day_of_week) %>%
+  count(mode_day_of_week) %>%
+  group_by(mode_day_of_week) %>%
+  arrange(-n)
+```
+<br />
+
+#### Determining which months had a weekday (not weekend) as the most popular day
+```{r}
+full_year_clean %>%
+  select(months, mode_day_of_week, total_rides) %>%
+  filter(mode_day_of_week != 1) %>% 
+  filter(mode_day_of_week != 7)
+```
+<br />
+
+#### Who took more rides on weekends? Casual riders or members?
+```{r}
+full_year_clean %>%
+  select(months, mode_day_of_week, count_rides_casual, count_rides_member, total_rides) %>%
+  group_by(mode_day_of_week) %>%
+  filter(mode_day_of_week == 1 || mode_day_of_week == 7) %>%
+  summarize(sum_casual = sum(count_rides_casual), sum_member = sum(count_rides_member), sum_total = sum(total_rides))
+```
+<br />
+
+#### Who took more rides during the week? Casual riders or members? (Days 2-6)
+```{r}
+full_year_clean %>%
+  select(months, mode_day_of_week, count_rides_casual, count_rides_member, total_rides) %>%
+  group_by(mode_day_of_week) %>%
+  filter(mode_day_of_week != 1 && mode_day_of_week != 7) %>%
+  summarize(sum_casual = sum(count_rides_casual), sum_member = sum(count_rides_member), sum_total = sum(total_rides))
+```
+<br />
+
+## Creating the data visualizations
+```{r}
+library(scales)
+```
+<br />
+
+#### Bar chart for total rides per month
+```{r}
+full_year_clean %>%
+  mutate(months = factor(months, levels = c(months))) %>%
+  ggplot(aes(x = months, y = total_rides, fill = months)) +
+    geom_bar(stat = "identity") +
+    theme(legend.position = "none") +
+    theme(axis.text.y = element_text(angle = 45)) +
+    scale_y_continuous(labels = comma)
+```
+<br />
+
+#### Bar chart for mean ride length per month
+```{r}
+full_year_clean %>%
+  mutate(months = factor(months, levels = c(months))) %>%
+  ggplot(aes(x = months, y = mean_ride_length, fill = months)) +
+  geom_bar(stat = "identity") +
+  theme(legend.position = "none") +
+  theme(axis.text.y = element_text(angle = 45))
+```
