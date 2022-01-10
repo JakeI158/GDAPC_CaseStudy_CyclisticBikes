@@ -13,6 +13,7 @@ Deliverables:<br />
 - Documentation:
   - Assumptions
   - Data sources
+  - Data cleaning
   - SQL
   - R
   - Personal notes for tracking project progress
