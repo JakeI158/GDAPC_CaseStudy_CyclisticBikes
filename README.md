@@ -16,7 +16,7 @@ Deliverables:<br />
   - SQL
   - R (including extra .RMD file to shocase the data visualizations createed with R)
 - Summary of the analysis (in the form of a PowerPoint slidedeck):
-  - Supporting visualizations
+  - Supporting visualizations (Tableau visualizations can also be viewed on Tableau Public, link below)
   - Key findings
 
 Enjoy!
