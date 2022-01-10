@@ -380,6 +380,7 @@ full_year_clean %>%
 <br />
 
 ## Creating the data visualizations
+Note: The graphs will not populate here, they will be displayed in the final PowerPoint slidedeck.
 
 ``` r
 library(scales)
