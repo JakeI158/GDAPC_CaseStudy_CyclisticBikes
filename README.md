@@ -14,7 +14,7 @@ Deliverables:<br />
   - [Data sources](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/Data_Sources.md)
   - [Data cleaning](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/Data_Cleaning.md)
   - [SQL](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/SQL_Queries.md)
-  - [R Script](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/R_Documentation.md) (including extra file to show R outputs, named "[CaseStudy1_R_Analysis.md](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/CaseStudy1_R_Analysis.md)")
+  - [R Documentation](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/R_Documentation.md) (including extra file to show R outputs, named "[CaseStudy1_R_Analysis.md](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/CaseStudy1_R_Analysis.md)")
 - Summary of the analysis (in the form of a PowerPoint slidedeck):
   - Supporting visualizations (Tableau visualizations can also be viewed on Tableau Public, link below)
   - Key findings
