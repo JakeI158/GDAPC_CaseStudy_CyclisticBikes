@@ -1,5 +1,5 @@
 # R (RStudio) Analysis and Visualizations Documentation
-*Note: a .RMD file will be uploaded to the project to showcase the visualizations created below*
+*Note: a file will be uploaded to the project to showcase the outputs of the code below*
 
 Loading the necessary packages
 ```R
