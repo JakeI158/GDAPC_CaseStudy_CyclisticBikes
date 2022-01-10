@@ -14,8 +14,7 @@ Deliverables:<br />
   - Data sources
   - Data cleaning
   - SQL
-  - R
-  - Personal notes for tracking project progress
+  - R (including extra .RMD file to shocase the data visualizations createed with R)
 - Summary of the analysis (in the form of a PowerPoint slidedeck):
   - Supporting visualizations
   - Key findings
