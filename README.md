@@ -14,7 +14,7 @@ Deliverables:<br />
   - Data sources
   - Data cleaning
   - SQL
-  - R (including extra .RMD file to shocase the data visualizations createed with R)
+  - R (including extra .RMD file to show R outputs, named "CaseStudy1_R_Analysis.md")
 - Summary of the analysis (in the form of a PowerPoint slidedeck):
   - Supporting visualizations (Tableau visualizations can also be viewed on Tableau Public, link below)
   - Key findings
