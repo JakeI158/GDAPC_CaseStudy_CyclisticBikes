@@ -16,6 +16,7 @@ Deliverables:<br />
   - [SQL](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/SQL_Queries.md)
   - [R Documentation](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/R_Documentation.md) (including extra file to show R outputs, named "[CaseStudy1_R_Analysis.md](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/CaseStudy1_R_Analysis.md)")
 - Summary of the analysis (in the form of a [PowerPoint slidedeck](https://github.com/JakeI158/GDAPC_CaseStudy_CyclisticBikes/blob/main/Cyclistic_BikeShare_CaseStudy.pptx)):
+  - Download and view in presentation mode to see presentation notes
   - Supporting visualizations (Tableau visualizations can also be viewed on Tableau Public, link below)
   - Key findings
 
