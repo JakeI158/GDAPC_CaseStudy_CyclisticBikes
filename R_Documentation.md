@@ -94,7 +94,7 @@ full_year_clean %>%
 ```
 <br />
 
-Who took more rides on weekends? Casual riders or members?
+Determing who took more rides on weekends, casual riders or members?
 ```R
 full_year_clean %>%
   select(months, mode_day_of_week, count_rides_casual, count_rides_member, total_rides) %>%
@@ -104,7 +104,7 @@ full_year_clean %>%
 ```
 <br />
 
-Who took more rides during the week? Casual riders or members? (Days 2-6)
+Determing who took more rides during the week, casual riders or members? (Days 2-6)
 ```R
 full_year_clean %>%
   select(months, mode_day_of_week, count_rides_casual, count_rides_member, total_rides) %>%
