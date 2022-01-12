@@ -1,5 +1,5 @@
 # GDAPC Case Study Cyclistic Bikes
-Data Analysis Capstone Project for the Google Data Analytics Professional Certificate program.<br />
+Data Analysis Capstone Project for the Data Analytics Professional Certificate program offered by Google.<br />
 
 This is a case study to be used as the capstone project for the Data Analytics Professional Certificate offered by Google through Coursera. More info on the program here:<br />
 https://grow.google/certificates/data-analytics/<br />
