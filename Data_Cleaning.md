@@ -10,14 +10,14 @@ Excel:
 - Created some initial calculated columns:
   - ride_length (ended_at - started_at)
   - day_of_week (started_at, 1 = Sun, 7 = Sat)
-- When calculating the mean ride length, there were some ride times that were negative (meaning that the data was entered incorrectly) which Excel cannot handle
+- When calculating the mean ride length, there were some ride times that were negative (meaning that the data was entered incorrectly) which Excel cannot process
   - This only applied to Dec 2020
   - Removed all rows with ride_length of ####### (about 6,322 rows)
-  - Now all calculations are in line with the other months
+  - Now all calculations are consistent with the other months
 - Column real_average (=AVERAGE(N:N)) represented the final mean ride length calculation after fixing the bad data in Dec 2020
-- Calculated the max ride length in the month and the mean for each day of the week
-- Created a pivot table to quickly view the number of rides casual riders vs members take in that month
-- Pivot table to compare average ride length of casual riders vs members
+- Calculated the max ride length by month, and the mean for each day of the week
+- Created a pivot table to quickly view the number of rides casual riders vs members take in each month
+- Pivot table to compare average ride length of all rides for casual riders vs members
 - Pivot table to compare average ride length per day of casual riders vs members
 - Added additional columns:
   - count_rides_casual (=COUNTIF(M:M, "casual"))
@@ -26,7 +26,7 @@ Excel:
   - avg_ride_casual (=AVERAGEIF(M:M, "casual", N:N))
   - avg_ride_member (=AVERAGEIF(M:M, "member", N:N))
 
-- Created a fresh spreadsheet that combines all the calculations above to summarize the years' worth of data (named "fullyear-tripdata")
+- Created an additional spreadsheet that combines all the calculations above to summarize the years' worth of data (named "fullyear-tripdata")
   - Columns:
     - max_ride_length
     - avg_ride_sun through avg_ride_sat (all 7 days)
